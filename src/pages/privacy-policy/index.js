@@ -3,22 +3,46 @@ import Button from '@mui/material/Button';
 import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch from '@mui/material/Switch';
-
+import Fab from '@mui/material/Fab';
 import {
     Link,
     goTo
-  } from 'react-chrome-extension-router';
+} from 'react-chrome-extension-router';
 import SetPasswordPageComponent from "../set-password";
+import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
+import { useEffect, useState } from "react";
 
 function PrivacyPolicyPageComponent() {
-    
+
+    const [btnStatus, setBtnStatus] = useState(true);
+
+    useEffect(() => {
+        window.addEventListener('scroll', (event) => {
+            console.log("scrollTop: ", window.pageYOffset)
+            if (window.pageYOffset < 100) {
+                setBtnStatus(true);
+            }else{
+                setBtnStatus(false);
+            }
+        });
+    }, [])
+
     const routeChange = () => {
         goTo(SetPasswordPageComponent, { message: "Hi" })
     }
-    
+
+    const scrollBottom = () => {
+        window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: "smooth" });
+        setBtnStatus(false)
+    }
+
     return (
         <>
             <div>
+                {btnStatus && <Fab onClick={() => scrollBottom()} aria-label="next" style={{ background: "#27378C", color: "#ffffff", position: "fixed", bottom: '5%', right: '5%' }}>
+                    <ArrowDownwardIcon />
+                </Fab>
+                }
                 <h2 className="font-clash-display" style={{ fontWeight: 500 }}>
                     Privacy Policy
                 </h2>

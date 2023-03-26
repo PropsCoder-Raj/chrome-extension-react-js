@@ -67,7 +67,7 @@ function SetPasswordPageComponent() {
                     <Toolbar className="bg-transparent">
                         <IconButton
                             onClick={() => backButton()}
-                            size="large"
+                            size="small"
                             edge="start"
                             color="inherit"
                             aria-label="menu"
@@ -79,7 +79,7 @@ function SetPasswordPageComponent() {
                             <span className="header-title">{!status ? "Enter PIN" : "Re-Enter PIN"}</span><br></br>
                             <span className="header-sub-title">Security Check</span>
                         </Typography>
-                        {/* <Button color="inherit"></Button> */}
+                        <Button color="inherit"></Button>
                     </Toolbar>
                 </AppBar>
                 <div className="centerDiv">
