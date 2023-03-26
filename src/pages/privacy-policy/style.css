@@ -1,0 +1,38 @@
+.centerDiv {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.centerBottonDiv {
+    width: 100%;
+    margin: 0;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    padding-left: 10px;
+    padding-right: 10px;
+    transform: translate(-50%, -50%);
+}
+
+.gray-text{
+    color: gray;
+    font-size: medium;
+}
+
+.privacy-policy-text{
+    margin-top: 3rem;
+    padding: 0 10px;
+    text-align: justify;
+    font-size: small;
+}
+
+.bottomContinueBtn{
+    width: 980%;
+    background: #27378C !important;
+    color: #fff !important;
+    text-transform: capitalize !important;
+    margin-left: 5px;
+}
