@@ -4,15 +4,22 @@ import './App.css';
 import PrivacyPolicyPageComponent from './pages/privacy-policy';
 import WelcomePageComponent from './pages/welcome';
 
+import {
+  Router
+} from 'react-chrome-extension-router';
+
 function App() {
   return (
     <div className="App">
       <div className="App-header">
-        <Routes>
+        <Router>
+          <WelcomePageComponent />
+        </Router>
+        {/* <Routes>
           <Route path='/' element={<Navigate to="/welcome" />} />
           <Route path='/welcome' element={<WelcomePageComponent />} />
           <Route path='/privacy-policy' element={<PrivacyPolicyPageComponent />} />
-        </Routes>
+        </Routes> */}
       </div>
     </div>
   );
