@@ -12,7 +12,6 @@ function WelcomePageComponent() {
 
     const routeChange = () => {
         goTo(PrivacyPolicyPageComponent, { message: "Hi" })
-        console.log("Func Call")
     }
 
     return (

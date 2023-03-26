@@ -29,10 +29,29 @@
     font-size: small;
 }
 
+.font-poppins{
+    font-family: 'Poppins' !important;
+}
+
+.Switch-Btn-Section{
+    text-align: left !important;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 100px 0 10px 0;
+}
+
+.MuiFormControlLabel-root .MuiFormControlLabel-label{
+    font-family: 'Poppins' !important;
+    font-size: smaller;
+}
+
 .bottomContinueBtn{
-    width: 980%;
+    width: 96%;
+    height: 4rem;
+    border-radius: 50px !important;
+    font-size: large !important;
     background: #27378C !important;
     color: #fff !important;
     text-transform: capitalize !important;
-    margin-left: 5px;
+    font-family: 'Poppins' !important;
 }
