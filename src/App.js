@@ -1,17 +1,13 @@
-import { Route, Routes, Navigate,  } from 'react-router-dom';
-
 import './App.css';
-import PrivacyPolicyPageComponent from './pages/privacy-policy';
 import WelcomePageComponent from './pages/welcome';
-
-import {
-  Router
-} from 'react-chrome-extension-router';
+import { Router } from 'react-chrome-extension-router';
+import { Toaster } from 'react-hot-toast';
 
 function App() {
   return (
     <div className="App">
       <div className="App-header">
+        <Toaster position="bottom-center" />
         <Router>
           <WelcomePageComponent />
         </Router>

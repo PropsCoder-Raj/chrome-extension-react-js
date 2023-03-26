@@ -7,10 +7,58 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import OTPInput from "react-otp-input";
+import { MuiOtpInput } from 'mui-one-time-password-input'
+import { useState } from "react";
+import toast from 'react-hot-toast';
+import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 
+import {
+    Link,
+    goTo
+  } from 'react-chrome-extension-router';
+import PrivacyPolicyPageComponent from "../privacy-policy";
 
 function SetPasswordPageComponent() {
+    const [password, setPassword] = useState('')
+    const [confirmPassword, setConfirmPassword] = useState('')
+    const [status, setStatus] = useState(false)
+
+    const handleChangePassword = (newValue) => {
+        setPassword(newValue)
+    }
+
+    const handleChangeConfirmPassword = (newValue) => {
+        setConfirmPassword(newValue)
+        if(newValue.length == 6){
+            setStatus(true)
+        }
+    }
+
+    const continuePassword = () => {
+        if(password.length == 6){
+            setStatus(true)
+        }else{
+            toast.error("Enter 6 digit password")
+        }
+    }
+
+    const continueConfirmPassword = () => {
+        if(confirmPassword.length < 6){
+            toast.error("Enter 6 digit password")
+        }else if(confirmPassword != password){
+            toast.error("Confirm password & Password must be equal.");
+        }else{
+            setStatus(true)
+        }
+    }
+    
+    const backButton = () => {
+        if(!status){
+            goTo(PrivacyPolicyPageComponent, { message: "Hi" });
+        }else if(status){
+            setStatus(false);
+        }
+    }
 
     return (
         <>
@@ -18,6 +66,7 @@ function SetPasswordPageComponent() {
                 <AppBar position="static" className="bg-transparent">
                     <Toolbar className="bg-transparent">
                         <IconButton
+                            onClick={() => backButton()}
                             size="large"
                             edge="start"
                             color="inherit"
@@ -27,14 +76,28 @@ function SetPasswordPageComponent() {
                             <ArrowBackIcon />
                         </IconButton>
                         <Typography className="font-clash-display" sx={{ flexGrow: 1, margin: '0 !important' }}>
-                            <span className="header-title">Enter PIN</span><br></br>
+                            <span className="header-title">{!status ? "Enter PIN" : "Re-Enter PIN"}</span><br></br>
                             <span className="header-sub-title">Security Check</span>
                         </Typography>
-                        <Button color="inherit"></Button>
+                        {/* <Button color="inherit"></Button> */}
                     </Toolbar>
                 </AppBar>
-                <div>
-                    
+                <div className="centerDiv">
+                    {
+                        !status ? 
+                        <>
+                            <MuiOtpInput id="passwordSet" value={password} onChange={(e) => handleChangePassword(e)} length={6} />
+                            <Button onClick={() => continuePassword()} endIcon={<NavigateNextIcon />}>
+                                Continue
+                            </Button>
+                        </> :
+                        <>
+                            <MuiOtpInput id="passwordSet" value={confirmPassword} onChange={(e) => handleChangeConfirmPassword(e)} length={6} />
+                            <Button onClick={() => continueConfirmPassword()} endIcon={<NavigateNextIcon />}>
+                                Continue
+                            </Button>
+                        </>
+                    }
                 </div>
             </div>
         </>
