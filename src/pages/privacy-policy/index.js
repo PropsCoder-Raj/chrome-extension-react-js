@@ -19,7 +19,7 @@ function PrivacyPolicyPageComponent() {
     useEffect(() => {
         window.addEventListener('scroll', (event) => {
             console.log("scrollTop: ", window.pageYOffset)
-            if (window.pageYOffset < 100) {
+            if (window.pageYOffset == 0) {
                 setBtnStatus(true);
             }else{
                 setBtnStatus(false);
@@ -28,6 +28,8 @@ function PrivacyPolicyPageComponent() {
     }, [])
 
     const routeChange = () => {
+        
+        window.scrollTo({ left: 0, top: 0, behavior: "smooth" });
         goTo(SetPasswordPageComponent, { message: "Hi" })
     }
 
