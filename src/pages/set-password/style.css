@@ -1,0 +1,13 @@
+.bg-transparent{
+    background: transparent !important;
+    box-shadow: unset !important;
+}
+
+.header-title{
+    font-size: xx-large !important;
+}
+
+.header-sub-title{
+    font-size: small !important;
+    color: gray !important;
+}

@@ -4,7 +4,17 @@ import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch from '@mui/material/Switch';
 
+import {
+    Link,
+    goTo
+  } from 'react-chrome-extension-router';
+import SetPasswordPageComponent from "../set-password";
+
 function PrivacyPolicyPageComponent() {
+    
+    const routeChange = () => {
+        goTo(SetPasswordPageComponent, { message: "Hi" })
+    }
     
     return (
         <>
@@ -21,7 +31,7 @@ function PrivacyPolicyPageComponent() {
                     <div className="Switch-Btn-Section">
                         <FormControlLabel className="font-poppins" control={<Switch />} label="I have read and agree to the terms." />
                     </div>
-                    <Button className="bottomContinueBtn font-clash-display">Continue</Button>
+                    <Button onClick={() => routeChange()} className="bottomContinueBtn font-clash-display">Continue</Button>
                 </div>
             </div>
         </>

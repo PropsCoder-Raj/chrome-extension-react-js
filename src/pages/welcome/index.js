@@ -17,11 +17,11 @@ function WelcomePageComponent() {
     return (
         <>
             <div>
-                <h2 className="font-clash-display">
+                <h2 className="font-clash-display" style={{ fontWeight: 500 }}>
                     Welcome to the safest <br /> Crypto Wallet
                 </h2>
                 <div className="centerDiv">
-                    <img className="animate__animated animate__bounceInDown" src="../../assets/Image.png" />
+                    <img className="animate__animated animate__jackInTheBox" src="../../assets/Image.png" />
                 </div>
                 <div className="centerBottonDiv">
                     <Fab onClick={() => routeChange()} aria-label="next" style={{ background: "#27378C", color: "#ffffff" }}>
