@@ -29,10 +29,6 @@
     font-size: small;
 }
 
-.font-poppins{
-    font-family: 'Poppins' !important;
-}
-
 .Switch-Btn-Section{
     text-align: left !important;
     padding-left: 10px;
@@ -41,7 +37,7 @@
 }
 
 .MuiFormControlLabel-root .MuiFormControlLabel-label{
-    font-family: 'Poppins' !important;
+    font-family: 'Clash Display', sans-serif !important;
     font-size: smaller;
 }
 
@@ -53,5 +49,4 @@
     background: #27378C !important;
     color: #fff !important;
     text-transform: capitalize !important;
-    font-family: 'Poppins' !important;
 }

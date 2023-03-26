@@ -17,7 +17,7 @@ function WelcomePageComponent() {
     return (
         <>
             <div>
-                <h2>
+                <h2 className="font-clash-display">
                     Welcome to the safest <br /> Crypto Wallet
                 </h2>
                 <div className="centerDiv">

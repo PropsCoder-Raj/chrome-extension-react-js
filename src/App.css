@@ -20,7 +20,14 @@
   flex-direction: column;
   font-size: calc(10px + 2vmin);
   color: white;
-  font-family: 'Poppins';
+}
+
+.font-poppins{
+  font-family: 'Poppins' !important;
+}
+
+.font-clash-display{
+  font-family: 'Clash Display', sans-serif !important;
 }
 
 .App-link {
