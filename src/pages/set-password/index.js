@@ -17,6 +17,7 @@ import {
     goTo
   } from 'react-chrome-extension-router';
 import PrivacyPolicyPageComponent from "../privacy-policy";
+import SeedPhasePageComponent from "../seed-phase";
 
 function SetPasswordPageComponent() {
     const [password, setPassword] = useState('')
@@ -49,6 +50,7 @@ function SetPasswordPageComponent() {
             toast.error("Confirm password & Password must be equal.");
         }else{
             setStatus(true)
+            goTo(SeedPhasePageComponent, { message: "Hi" });
         }
     }
     
@@ -79,7 +81,7 @@ function SetPasswordPageComponent() {
                             <span className="header-title">{!status ? "Enter PIN" : "Re-Enter PIN"}</span><br></br>
                             <span className="header-sub-title">Security Check</span>
                         </Typography>
-                        <Button color="inherit"></Button>
+                        <Button style={{ minWidth: "30px" }} color="inherit"></Button>
                     </Toolbar>
                 </AppBar>
                 <div className="centerDiv">

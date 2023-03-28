@@ -1,0 +1,55 @@
+.bg-transparent{
+    background: transparent !important;
+    box-shadow: unset !important;
+}
+
+.header-title{
+    font-size: xx-large !important;
+}
+
+.header-sub-title{
+    font-size: small !important;
+    color: gray !important;
+}
+
+#passwordSet{
+    padding: 15px !important;
+}
+
+#passwordSet input{
+    background: #232949 !important;
+    border-radius: 50px !important;
+    height: 15px !important;
+    width: 15px !important;
+    color: #fff;
+    border: unset !important;
+    outline: unset !important;
+}
+
+#passwordSet .MuiInputBase-formControl{
+    border-radius: 50px !important;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.seed-phrase-section{
+    margin-top: 2rem;
+    font-size: smaller;
+    padding: 0 30px;
+    text-align: left;
+}
+
+.chip-section{
+    color: white !important;
+    background: #192255 !important;
+    width: 100% !important;
+    padding: 25px 0 !important;    
+}
+
+.getNewSeedBtn{
+    margin-top: 20px !important;
+    border: unset !important;
+    color: gray !important;;
+}

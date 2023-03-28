@@ -2,6 +2,7 @@ import './App.css';
 import WelcomePageComponent from './pages/welcome';
 import { Router } from 'react-chrome-extension-router';
 import { Toaster } from 'react-hot-toast';
+import SeedPhasePageComponent from './pages/seed-phase';
 
 function App() {
   return (
@@ -9,7 +10,8 @@ function App() {
       <div className="App-header">
         <Toaster position="bottom-center" />
         <Router>
-          <WelcomePageComponent />
+          {/* <WelcomePageComponent /> */}
+          <SeedPhasePageComponent />
         </Router>
         {/* <Routes>
           <Route path='/' element={<Navigate to="/welcome" />} />
