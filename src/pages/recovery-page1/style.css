@@ -1,0 +1,79 @@
+.bg-transparent{
+    background: transparent !important;
+    box-shadow: unset !important;
+}
+
+.header-title{
+    font-size: xx-large !important;
+}
+
+.header-sub-title{
+    font-size: small !important;
+    color: gray !important;
+}
+
+#passwordSet{
+    padding: 15px !important;
+}
+
+#passwordSet input{
+    background: #232949 !important;
+    border-radius: 50px !important;
+    height: 15px !important;
+    width: 15px !important;
+    color: #fff;
+    border: unset !important;
+    outline: unset !important;
+}
+
+#passwordSet .MuiInputBase-formControl{
+    border-radius: 50px !important;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.seed-phrase-section{
+    margin-top: 2rem;
+    font-size: smaller;
+    padding: 0 30px;
+    text-align: left;
+}
+
+.recovery-public-key-section{
+    margin-top: 50px;
+    color: white !important;
+    background: #192255 !important;
+    padding: 30px 40px !important;
+    border-radius: 50px !important;   
+    position:  relative !important 
+}
+
+.getNewSeedBtn{
+    margin-top: 20px !important;
+    border: unset !important;
+    color: gray !important;;
+}
+
+.recoverySectionTopBtn{
+    background: #0d1541 !important;
+    margin: 0 !important;
+    position: absolute !important;
+    top: -5% !important;
+    left: 50% !important;
+    padding: 10px 20px !important;
+    border-radius: 20px !important;
+    transform: translate(-50%, -50%) !important;
+}
+
+.recoverySectionBottomBtn{
+    background: #0d1541 !important;
+    margin: 0 !important;
+    position: absolute !important;
+    bottom: -35% !important;
+    left: 50% !important;
+    padding: 10px 40px !important;
+    border-radius: 20px !important;
+    transform: translate(-50%, -50%) !important;
+}
