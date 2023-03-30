@@ -2,7 +2,7 @@ import './App.css';
 import WelcomePageComponent from './pages/welcome';
 import { Router } from 'react-chrome-extension-router';
 import { Toaster } from 'react-hot-toast';
-import ImportAccountPageComponent from './pages/import-account';
+import AboutUsPageComponent from './pages/about-us';
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
         <Toaster position="bottom-center" />
         <Router>
           {/* <WelcomePageComponent /> */}
-          <ImportAccountPageComponent />
+          <AboutUsPageComponent />
         </Router>
         {/* <Routes>
           <Route path='/' element={<Navigate to="/welcome" />} />
