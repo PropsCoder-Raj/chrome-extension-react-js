@@ -2,7 +2,7 @@ import './App.css';
 import WelcomePageComponent from './pages/welcome';
 import { Router } from 'react-chrome-extension-router';
 import { Toaster } from 'react-hot-toast';
-import RecoveryPage2Component from './pages/recovery-page2';
+import SecurityAlert2PageComponent from './pages/security-alert-2';
 
 function App() {
   return (
@@ -11,13 +11,8 @@ function App() {
         <Toaster position="bottom-center" />
         <Router>
           {/* <WelcomePageComponent /> */}
-          <RecoveryPage2Component />
+          <SecurityAlert2PageComponent />
         </Router>
-        {/* <Routes>
-          <Route path='/' element={<Navigate to="/welcome" />} />
-          <Route path='/welcome' element={<WelcomePageComponent />} />
-          <Route path='/privacy-policy' element={<PrivacyPolicyPageComponent />} />
-        </Routes> */}
       </div>
     </div>
   );
