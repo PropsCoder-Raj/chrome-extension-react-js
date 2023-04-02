@@ -6,25 +6,18 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { useEffect, useState } from "react";
-import toast from 'react-hot-toast';
 import Chip from '@mui/material/Chip';
 import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import RefreshIcon from '@mui/icons-material/Refresh';
 import randomWords from 'random-words';
 
-import {
-    Link,
-    goTo
-} from 'react-chrome-extension-router';
-import PrivacyPolicyPageComponent from "../privacy-policy";
+
+import { goTo } from 'react-chrome-extension-router';
 import SetPasswordPageComponent from "../set-password";
+import RecoveryPage1Component from "../recovery-page1";
 
 function SeedPhasePageComponent() {
-    const [password, setPassword] = useState('');
-    const [confirmPassword, setConfirmPassword] = useState('');
-    const [status, setStatus] = useState(false);
     const [publicKey, setPublicKey] = useState([]);
 
     useEffect(() => {
@@ -37,6 +30,10 @@ function SeedPhasePageComponent() {
 
     const backButton = () => {
         goTo(SetPasswordPageComponent, { message: "Hi" });
+    }
+
+    const nextPage = () => {
+        goTo(RecoveryPage1Component, { message: "Hi" });
     }
 
     return (
@@ -73,7 +70,7 @@ function SeedPhasePageComponent() {
                                     return (
                                         <>
                                             <Grid item xs={4}>
-                                                <Chip className="chip-section font-poppins" label={`${index + 1}. ${ele}`} />
+                                                <Chip style={{ color: "white", background: "#192255", width: "100%", padding: "25px 0" }} className="chip-section font-poppins" label={`${index + 1}. ${ele}`} />
                                             </Grid>
                                         </>
                                     )
@@ -84,7 +81,7 @@ function SeedPhasePageComponent() {
                 </div>
             </div>
             <div style={{ marginTop: "2rem" }}>
-                <Button className="bottomContinueBtn font-clash-display">I've written it down</Button>
+                <Button className="bottomContinueBtn font-clash-display" onClick={() => nextPage()}>I've written it down</Button>
             </div>
             <div>
                 <Button onClick={() => generatePublicKey()} className="getNewSeedBtn font-clash-display" variant="outlined" startIcon={<RefreshIcon />}>

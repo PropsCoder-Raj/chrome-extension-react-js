@@ -1,11 +1,8 @@
 import "./style.css";
 import Fab from '@mui/material/Fab';
 import EastIcon from '@mui/icons-material/East';
-// import { Link } from "react-router-dom";
-import {
-    Link,
-    goTo
-  } from 'react-chrome-extension-router';
+
+import { goTo } from 'react-chrome-extension-router';
 import PrivacyPolicyPageComponent from "../privacy-policy";
 
 function WelcomePageComponent() {

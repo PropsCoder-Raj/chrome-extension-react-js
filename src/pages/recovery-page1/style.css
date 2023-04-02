@@ -77,3 +77,14 @@
     border-radius: 20px !important;
     transform: translate(-50%, -50%) !important;
 }
+
+
+
+.continueBtn{
+    padding: 20px !important;
+    background: #27378c !important;
+    width: 90% !important;
+    border-radius: 30px !important;
+    text-transform: capitalize !important;
+    font-size: larger !important;
+}

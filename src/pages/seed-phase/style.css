@@ -1,22 +1,22 @@
-.bg-transparent{
+.bg-transparent {
     background: transparent !important;
     box-shadow: unset !important;
 }
 
-.header-title{
+.header-title {
     font-size: xx-large !important;
 }
 
-.header-sub-title{
+.header-sub-title {
     font-size: small !important;
     color: gray !important;
 }
 
-#passwordSet{
+#passwordSet {
     padding: 15px !important;
 }
 
-#passwordSet input{
+#passwordSet input {
     background: #232949 !important;
     border-radius: 50px !important;
     height: 15px !important;
@@ -26,30 +26,24 @@
     outline: unset !important;
 }
 
-#passwordSet .MuiInputBase-formControl{
+#passwordSet .MuiInputBase-formControl {
     border-radius: 50px !important;
 }
 
-.text-center{
+.text-center {
     text-align: center;
 }
 
-.seed-phrase-section{
+.seed-phrase-section {
     margin-top: 2rem;
     font-size: smaller;
     padding: 0 30px;
     text-align: left;
 }
 
-.chip-section{
-    color: white !important;
-    background: #192255 !important;
-    width: 100% !important;
-    padding: 25px 0 !important;    
-}
-
-.getNewSeedBtn{
+.getNewSeedBtn {
     margin-top: 20px !important;
     border: unset !important;
-    color: gray !important;;
+    color: gray !important;
+    ;
 }

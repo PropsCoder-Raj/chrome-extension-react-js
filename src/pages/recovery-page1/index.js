@@ -7,13 +7,13 @@ import IconButton from '@mui/material/IconButton';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { useEffect, useState } from "react";
 import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
 import randomWords from 'random-words';
 
-import {
-    Link,
-    goTo
-} from 'react-chrome-extension-router';
-import SetPasswordPageComponent from "../set-password";
+import { goTo } from 'react-chrome-extension-router';
+import SeedPhasePageComponent from "../seed-phase";
+import RecoveryPage2Component from "../recovery-page2";
+import { toast } from "react-hot-toast";
 
 function RecoveryPage1Component() {
     const [publicKey, setPublicKey] = useState([]);
@@ -26,8 +26,18 @@ function RecoveryPage1Component() {
         setPublicKey(randomWords(12))
     }
 
+    const copyText = () => {
+        const text = publicKey.join(' ')
+        navigator.clipboard.writeText(text);
+        toast.success("Key Copied")
+    }
+
     const backButton = () => {
-        goTo(SetPasswordPageComponent, { message: "Hi" });
+        goTo(SeedPhasePageComponent, { message: "Hi" });
+    }
+
+    const nextPage = () => {
+        goTo(RecoveryPage2Component, { message: "Hi" });
     }
 
     return (
@@ -61,18 +71,27 @@ function RecoveryPage1Component() {
                         <div className="recovery-public-key-section font-poppins">
                             <><Button className="recoverySectionTopBtn font-clash-display" color="inherit">Recovery Phrase</Button></>
                             <div>
-                            {
-                                publicKey.map((ele, index) => {
-                                    return (
-                                        <>
+                                {
+                                    publicKey.map((ele, index) => {
+                                        return (
+                                            <>
                                                 <span>{ele} </span>
-                                        </>
-                                    )
-                                })
-                            }
+                                            </>
+                                        )
+                                    })
+                                }
                             </div>
-                            <><Button className="recoverySectionBottomBtn font-clash-display" color="inherit">Copy</Button></>
+                            <><Button className="recoverySectionBottomBtn font-clash-display" onClick={() => copyText()} color="inherit">Copy</Button></>
                         </div>
+                    </Box>
+                </div>
+                <div className="centerBottonDiv">
+                    <Box sx={{ flexGrow: 1, marginTop: "5rem" }}>
+                        <Grid container spacing={1}>    
+                            <Grid item xs={12}>
+                                <Button onClick={() => nextPage()} className="continueBtn font-clash-display" color="inherit">Continue</Button>
+                            </Grid>
+                        </Grid>
                     </Box>
                 </div>
             </div>

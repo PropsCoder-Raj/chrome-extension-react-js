@@ -24,7 +24,7 @@ function AboutUsPageComponent() {
     useEffect(() => {
         window.addEventListener('scroll', (event) => {
             console.log("scrollTop: ", window.pageYOffset)
-            if (window.pageYOffset == 0) {
+            if (window.pageYOffset === 0) {
                 setBtnStatus(true);
             }else{
                 setBtnStatus(false);

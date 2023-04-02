@@ -1,15 +1,7 @@
 import "./style.css";
 import Button from '@mui/material/Button';
-import FormGroup from '@mui/material/FormGroup';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Switch from '@mui/material/Switch';
-import Fab from '@mui/material/Fab';
-import {
-    Link,
-    goTo
-} from 'react-chrome-extension-router';
+import { goTo } from 'react-chrome-extension-router';
 import SetPasswordPageComponent from "../set-password";
-import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import { useEffect, useState } from "react";
 
 function SecurityAlert2PageComponent() {
@@ -19,7 +11,7 @@ function SecurityAlert2PageComponent() {
     useEffect(() => {
         window.addEventListener('scroll', (event) => {
             console.log("scrollTop: ", window.pageYOffset)
-            if (window.pageYOffset == 0) {
+            if (window.pageYOffset === 0) {
                 setBtnStatus(true);
             }else{
                 setBtnStatus(false);
@@ -28,14 +20,6 @@ function SecurityAlert2PageComponent() {
     }, [])
 
     const routeChange = () => {
-        
-        window.scrollTo({ left: 0, top: 0, behavior: "smooth" });
-        goTo(SetPasswordPageComponent, { message: "Hi" })
-    }
-
-    const scrollBottom = () => {
-        window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: "smooth" });
-        setBtnStatus(false)
     }
 
     return (

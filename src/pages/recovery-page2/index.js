@@ -15,10 +15,12 @@ import {
     Link,
     goTo
 } from 'react-chrome-extension-router';
-import SetPasswordPageComponent from "../set-password";
+import RecoveryPage1Component from "../recovery-page1";
+import RecoveryPage3Component from "../recovery-page3";
 
 function RecoveryPage2Component() {
     const [publicKey, setPublicKey] = useState([]);
+    const [enterPublicKey, setEnterPublicKey] = useState("");
 
     useEffect(() => {
         generatePublicKey()
@@ -29,7 +31,18 @@ function RecoveryPage2Component() {
     }
 
     const backButton = () => {
-        goTo(SetPasswordPageComponent, { message: "Hi" });
+        goTo(RecoveryPage1Component, { message: "Hi" });
+    }
+
+    const nextPage = () => {
+        goTo(RecoveryPage3Component, { message: "Hi" });
+    }
+
+    const pressKey = (id, value) => {
+        const array = enterPublicKey.split(" ");
+        array.push(value)
+        setEnterPublicKey(array.join(" "))
+        document.getElementById(id).disabled = true;
     }
 
     return (
@@ -61,9 +74,9 @@ function RecoveryPage2Component() {
                 <div style={{ padding: "10px" }}>
                     <Box sx={{ flexGrow: 1 }}>
                         <div className="recovery-public-key-section-2 font-poppins">
-                            <><Button className="recoverySectionTopBtn font-clash-display" color="inherit">Recovery Phrase</Button></>
-                            <div style={{ height: "60px" }}>
-
+                            <><Button className="recoverySectionTopBtn-2 font-clash-display" color="inherit">Recovery Phrase</Button></>
+                            <div id="rp2-public-key" style={{ minHeight: "70px" }}>
+                             {enterPublicKey}
                             </div>
                         </div>
                     </Box>
@@ -76,7 +89,7 @@ function RecoveryPage2Component() {
                                     return (
                                         <>
                                             <Grid item xs={4}>
-                                                <Button className="verifyBtn-2 font-poppins" color="inherit">{ele}</Button>
+                                                <Button id={`letterKey${index+1}`} onClick={() => pressKey(`letterKey${index+1}`, ele)} className="verifyBtn-2 font-poppins" color="inherit">{ele}</Button>
                                             </Grid>
                                         </>
                                     )
@@ -92,7 +105,7 @@ function RecoveryPage2Component() {
                                 <Button className="cancelBtn font-clash-display" color="inherit">Cancel</Button>
                             </Grid>
                             <Grid item xs={6}>
-                                <Button className="verifyBtn font-clash-display" color="inherit">Verify</Button>
+                                <Button className="verifyBtn font-clash-display" onClick={() => nextPage()} color="inherit">Verify</Button>
                             </Grid>
                         </Grid>
                     </Box>

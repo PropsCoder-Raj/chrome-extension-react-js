@@ -1,21 +1,16 @@
 import "./style.css";
 import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { MuiOtpInput } from 'mui-one-time-password-input'
 import { useState } from "react";
 import toast from 'react-hot-toast';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 
-import {
-    Link,
-    goTo
-  } from 'react-chrome-extension-router';
+import { goTo } from 'react-chrome-extension-router';
 import PrivacyPolicyPageComponent from "../privacy-policy";
 import SeedPhasePageComponent from "../seed-phase";
 
@@ -30,13 +25,13 @@ function SetPasswordPageComponent() {
 
     const handleChangeConfirmPassword = (newValue) => {
         setConfirmPassword(newValue)
-        if(newValue.length == 6){
+        if(newValue.length === 6){
             setStatus(true)
         }
     }
 
     const continuePassword = () => {
-        if(password.length == 6){
+        if(password.length === 6){
             setStatus(true)
         }else{
             toast.error("Enter 6 digit password")
@@ -46,7 +41,7 @@ function SetPasswordPageComponent() {
     const continueConfirmPassword = () => {
         if(confirmPassword.length < 6){
             toast.error("Enter 6 digit password")
-        }else if(confirmPassword != password){
+        }else if(confirmPassword !== password){
             toast.error("Confirm password & Password must be equal.");
         }else{
             setStatus(true)
