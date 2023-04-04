@@ -1,5 +1,5 @@
 import './App.css';
-import SeedPhasePageComponent from './pages/seed-phase';
+import HomePageComponent from './pages/home';
 import WelcomePageComponent from './pages/welcome';
 import { Router } from 'react-chrome-extension-router';
 import { Toaster } from 'react-hot-toast';
@@ -11,7 +11,7 @@ function App() {
         <Toaster position="bottom-center" />
         <Router>
           {/* <WelcomePageComponent /> */}
-          <SeedPhasePageComponent />
+          <HomePageComponent />
         </Router>
       </div>
     </div>
