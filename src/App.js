@@ -1,5 +1,5 @@
 import './App.css';
-import HomePageComponent from './pages/home';
+import ImportAccountPageComponent from './pages/import-account';
 import WelcomePageComponent from './pages/welcome';
 import { Router } from 'react-chrome-extension-router';
 import { Toaster } from 'react-hot-toast';
@@ -11,7 +11,7 @@ function App() {
         <Toaster position="bottom-center" />
         <Router>
           {/* <WelcomePageComponent /> */}
-          <HomePageComponent />
+          <ImportAccountPageComponent />
         </Router>
       </div>
     </div>
