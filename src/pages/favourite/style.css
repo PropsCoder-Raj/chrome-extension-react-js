@@ -1,0 +1,13 @@
+
+#transactionList .MuiTypography-body1{
+    font-family: 'Clash Display', sans-serif !important;
+}
+
+#transactionList .MuiTypography-body2{
+    color: gray;
+    font-family: 'Clash Display', sans-serif !important;
+}
+
+#transactionList .list-end-text{
+    text-align: right;
+}
