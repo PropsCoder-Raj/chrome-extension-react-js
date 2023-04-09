@@ -1,0 +1,19 @@
+#faqs-box-section .MuiAccordionSummary-root{
+    background: #0d1541;
+    color: white;
+    border: unset !important;
+}
+
+#faqs-box-section .MuiSvgIcon-root{
+    color: #fff;
+}
+
+#faqs-box-section .MuiTypography-root{
+  font-family: 'Clash Display', sans-serif !important;
+}
+
+#faqs-box-section .MuiAccordionDetails-root{
+    background: #0d1541;
+    color: #fff;
+    text-align: left;
+}
