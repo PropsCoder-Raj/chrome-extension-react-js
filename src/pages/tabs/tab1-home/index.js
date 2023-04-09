@@ -17,11 +17,10 @@ import {
     Link,
     goTo
 } from 'react-chrome-extension-router';
-import SetPasswordPageComponent from "../set-password";
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import { useEffect, useState } from "react";
 
-function HomePageComponent() {
+function Tab1HomePageComponent() {
 
     const [btnStatus, setBtnStatus] = useState(true);
 
@@ -35,21 +34,6 @@ function HomePageComponent() {
             }
         });
     }, [])
-
-    const backButton = () => {
-
-    }
-
-    const routeChange = () => {
-
-        window.scrollTo({ left: 0, top: 0, behavior: "smooth" });
-        goTo(SetPasswordPageComponent, { message: "Hi" })
-    }
-
-    const scrollBottom = () => {
-        window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: "smooth" });
-        setBtnStatus(false)
-    }
 
     return (
         <>
@@ -135,4 +119,4 @@ function HomePageComponent() {
         </>
     )
 }
-export default HomePageComponent;
+export default Tab1HomePageComponent;

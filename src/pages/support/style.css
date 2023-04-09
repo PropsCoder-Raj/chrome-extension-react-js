@@ -1,0 +1,19 @@
+#supportPageList {
+    padding: 10px;
+}
+
+#supportPageList .MuiList-root {
+    border-radius: 20px !important;
+    margin-bottom: 5px !important;
+}
+
+#supportPageList .MuiAvatar-root{
+    border-radius: 15px !important;
+    background: radial-gradient(#fff, lightblue);
+    color: #000;
+}
+
+#supportPageList .MuiTypography-body1 {
+    font-family: 'Clash Display', sans-serif !important;
+    font-size: larger;
+}

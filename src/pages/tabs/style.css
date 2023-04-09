@@ -1,0 +1,39 @@
+.centerDiv {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.centerBottonDiv {
+    margin: 0;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    width: 100% !important;
+    transform: translate(-50%, -50%);
+}
+
+#mainTabs .MuiTabs-indicator{
+    background: unset;
+}
+
+#mainTabs {
+    width: 100%;
+    margin: 0;
+    position: fixed;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-top: 20px !important;
+    padding-bottom: 35px !important;
+    background: #0d1541;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+#mainTabs .Mui-selected{
+    background: #192255;
+    border-radius: 20px;
+}
