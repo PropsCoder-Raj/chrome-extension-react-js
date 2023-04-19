@@ -1,5 +1,5 @@
 import './App.css';
-import FAQsPageComponent from './pages/faqs';
+import HistoryPageComponent from './pages/history';
 import WelcomePageComponent from './pages/welcome';
 import { Router } from 'react-chrome-extension-router';
 import { Toaster } from 'react-hot-toast';
@@ -11,7 +11,7 @@ function App() {
         <Toaster position="bottom-center" />
         <Router>
           {/* <WelcomePageComponent /> */}
-          <FAQsPageComponent />
+          <HistoryPageComponent />
         </Router>
       </div>
     </div>

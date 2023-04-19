@@ -1,0 +1,29 @@
+#historyTab .MuiTab-root{
+    color: #fff !important;
+    text-transform: capitalize !important;
+    font-size: large;
+    font-family: 'Clash Display', sans-serif !important;
+}
+
+
+#historyTab .MuiTabs-indicator{
+    background: #27378c !important;
+}
+
+
+#historyList .MuiTypography-body1{
+    font-family: 'Clash Display', sans-serif !important;
+}
+
+#historyList .MuiTypography-body2{
+    color: white;
+    font-family: 'Clash Display', sans-serif !important;
+}
+
+#subHistoryList .MuiTypography-body2{
+    color: gray;
+}
+
+#historyList .list-end-text{
+    text-align: right;
+}
