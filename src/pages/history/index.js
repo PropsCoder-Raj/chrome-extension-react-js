@@ -19,6 +19,7 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
+import SwapHorizIcon from '@mui/icons-material/SwapHoriz';
 
 function HistoryPageComponent() {
 
@@ -54,26 +55,74 @@ function HistoryPageComponent() {
                         <Tab label="Buy" value="2" />
                     </Tabs>
                 </Box>
-                <TabPanel value="1">Item One</TabPanel>
+                <TabPanel value="1">
+                    <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+                        <List id="historySwapList" sx={{ width: '100%', bgcolor: 'transparent', borderBottom: "dashed 1px gray" }}>
+                            <ListItem style={{ padding: "0" }}
+                                secondaryAction={
+                                    <ListItemText className="list-end-text" primary="BNB" secondary={
+                                        <React.Fragment>
+                                            <Typography
+                                                sx={{ display: 'inline' }}
+                                                component="span"
+                                                variant="body2"
+                                                color="text.primary"
+                                            >
+                                                0xfrgtrgfbdf
+                                            </Typography><br></br>
+                                            {" 0.00165150 BNB"}
+                                        </React.Fragment>
+                                    } />
+                                }>
+                                <ListItemText id="subHistorySwapList" className="font-clash-display" primary="ETH" secondary={
+                                    <React.Fragment>
+                                        <Typography
+                                            sx={{ display: 'inline' }}
+                                            component="span"
+                                            variant="body2"
+                                            color="text.primary"
+                                        >
+                                            0xfrgtrgfbdf
+                                        </Typography><br></br>
+                                        {" 0.1 ETH"}
+                                    </React.Fragment>
+                                } />
+                                <Box id="subHistorySwapIconButton">
+                                    <IconButton size="large">
+                                        <SwapHorizIcon fontSize="inherit" style={{ color: "#fff" }} />
+                                    </IconButton><br></br>
+                                    <Typography
+                                            sx={{ display: 'inline' }}
+                                            component="span"
+                                            variant="body2"
+                                            color="text.primary"
+                                        >
+                                            10 August, 2023
+                                        </Typography><br></br>{"1:30PM"}
+                                </Box>
+                            </ListItem>
+                        </List>
+                    </Box>
+                </TabPanel>
                 <TabPanel value="2">
                     <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-                        <List id="historyList" sx={{ width: '100%', bgcolor: 'transparent', borderBottom: "dashed 1px gray" }}>
+                        <List id="historyBuyList" sx={{ width: '100%', bgcolor: 'transparent', borderBottom: "dashed 1px gray" }}>
                             <ListItem style={{ padding: "0" }}
                                 secondaryAction={
                                     <ListItemText className="list-end-text" primary="August 10, 2023" secondary="7:16 PM" />
                                 }>
-                                <ListItemText id="subHistoryList" className="font-clash-display" primary="ETH" secondary={
+                                <ListItemText id="subHistoryBuyList" className="font-clash-display" primary="ETH" secondary={
                                     <React.Fragment>
-                                    <Typography
-                                      sx={{ display: 'inline' }}
-                                      component="span"
-                                      variant="body2"
-                                      color="text.primary"
-                                    >
-                                      0xfrgtrgfbdf
-                                    </Typography><br></br>
-                                    {" 0.00165150 ETH"}
-                                  </React.Fragment>
+                                        <Typography
+                                            sx={{ display: 'inline' }}
+                                            component="span"
+                                            variant="body2"
+                                            color="text.primary"
+                                        >
+                                            0xfrgtrgfbdf
+                                        </Typography><br></br>
+                                        {" 0.00165150 ETH"}
+                                    </React.Fragment>
                                 } />
                             </ListItem>
                         </List>

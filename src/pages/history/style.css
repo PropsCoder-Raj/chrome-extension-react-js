@@ -11,19 +11,64 @@
 }
 
 
-#historyList .MuiTypography-body1{
+#historyBuyList .MuiTypography-body1{
     font-family: 'Clash Display', sans-serif !important;
 }
 
-#historyList .MuiTypography-body2{
+#historyBuyList .MuiTypography-body2{
     color: white;
     font-family: 'Clash Display', sans-serif !important;
 }
 
-#subHistoryList .MuiTypography-body2{
+#subHistoryBuyList .MuiTypography-body2{
     color: gray;
 }
 
-#historyList .list-end-text{
+#historyBuyList .list-end-text{
     text-align: right;
+}
+
+#historySwapList .MuiTypography-body1{
+    font-family: 'Clash Display', sans-serif !important;
+}
+
+#historySwapList .MuiTypography-body2{
+    color: gray;
+    font-family: 'Clash Display', sans-serif !important;
+}
+
+#historySwapList .list-end-text{
+    text-align: right;
+}
+
+#historySwapList .MuiListItemSecondaryAction-root{
+    right: 0 !important;
+}
+
+#subHistorySwapList{
+    flex: unset;
+    -webkit-flex: unset
+}
+
+#subHistorySwapIconButton{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: 'Clash Display', sans-serif !important;
+    font-size: 10px;
+}
+
+#subHistorySwapIconButton .MuiButtonBase-root{
+    background: #232949 !important;
+    padding: 3px;
+}
+
+#subHistorySwapIconButton .MuiTypography-body2{
+    color: white;
+    line-height: 0px !important;
+    font-size: 10px !important;
+    font-family: 'Clash Display', sans-serif !important;
 }
