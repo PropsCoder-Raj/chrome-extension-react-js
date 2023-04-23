@@ -1,0 +1,26 @@
+#toAddressSection input, #enterAmountSection input{
+    background: transparent;
+    border: unset;
+    color: white;
+}
+
+#toAddressSection input:focus, #enterAmountSection input:focus{
+    border: unset !important;
+    box-shadow: unset !important;
+}
+
+#toAddressSection .input-group-text, #enterAmountSection .input-group-text{
+    background: transparent;
+    color: white;
+    border: unset;
+}
+
+#enterAmountSection .recovery-public-key-section{
+    padding: 25px !important;
+    margin-top: 5px !important;
+}
+
+#enterAmountSection .subtitle{
+    color: gray !important;
+    font-size: smaller;
+}
