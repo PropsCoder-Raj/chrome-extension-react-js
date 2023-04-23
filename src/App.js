@@ -2,6 +2,7 @@ import './App.css';
 import HistoryPageComponent from './pages/history';
 import MyCoinPageComponent from './pages/my-coins';
 import QrCodeComponent from './pages/qr-code';
+import SelectChainPageComponent from './pages/select-chain';
 import SendToAddressComponent from './pages/sendToAddress';
 import TabsMainModuleComponent from './pages/tabs';
 import WelcomePageComponent from './pages/welcome';
@@ -15,7 +16,7 @@ function App() {
         <Toaster position="bottom-center" />
         <Router>
           {/* <WelcomePageComponent /> */}
-          <MyCoinPageComponent />
+          <SelectChainPageComponent />
         </Router>
       </div>
     </div>
