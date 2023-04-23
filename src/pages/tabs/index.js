@@ -15,6 +15,7 @@ import { goTo } from 'react-chrome-extension-router';
 import PrivacyPolicyPageComponent from "../privacy-policy";
 import Tab1HomePageComponent from "./tab1-home";
 import Tab4SettingPageComponent from "./tab4-setting";
+import Tab3BrowserPageComponent from "./tab3-browser";
 
 function TabsMainModuleComponent() {
 
@@ -54,6 +55,7 @@ function TabsMainModuleComponent() {
         <>
             <div>
                 { value == 0 && <><Tab1HomePageComponent /></> }
+                { value == 2 && <><Tab3BrowserPageComponent /></> }
                 { value == 3 && <><Tab4SettingPageComponent /></> }
 
                 <div id='mainTabs'>

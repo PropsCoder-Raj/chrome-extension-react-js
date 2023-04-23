@@ -1,0 +1,19 @@
+#browserSection{
+    padding: 20px;
+}
+
+#browserSection .MuiPaper-root{
+    background: #232949 !important;
+    border-radius: 50px !important;
+    width: 100%;
+}
+
+#browserSection .MuiInputBase-input::placeholder{
+    color: white !important;
+    font-family: 'Clash Display', sans-serif !important;
+}
+
+#browserSection .MuiSvgIcon-root{
+    color: white !important;
+    padding: 10px !important;
+}
