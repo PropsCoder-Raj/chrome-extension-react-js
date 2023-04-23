@@ -100,7 +100,7 @@ function Tab3BrowserPageComponent() {
                                             <IconButton style={{ background: "#fce35f" }}>
                                                 <StarIcon style={{ color: "#192255" }} />
                                             </IconButton>
-                                            <div className="font-clash-display" style={{ color: "white", marginTop: "15px" }}>Favorite</div>
+                                            <div className="font-clash-display" style={{ color: "white", marginTop: "15px" }}>Favourites</div>
                                         </CardContent>
                                     </Card>
                                 </Grid>

@@ -1,5 +1,6 @@
 import './App.css';
 import HistoryPageComponent from './pages/history';
+import QrCodeComponent from './pages/qr-code';
 import TabsMainModuleComponent from './pages/tabs';
 import WelcomePageComponent from './pages/welcome';
 import { Router } from 'react-chrome-extension-router';
@@ -12,7 +13,7 @@ function App() {
         <Toaster position="bottom-center" />
         <Router>
           {/* <WelcomePageComponent /> */}
-          <TabsMainModuleComponent />
+          <QrCodeComponent />
         </Router>
       </div>
     </div>
